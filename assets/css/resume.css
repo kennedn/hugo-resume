@@ -6,10 +6,6 @@
   --left-column-width: 60%;
 }
 
-@font-face {
-  font-family: ubuntu;
-  src: url("/font/Ubuntu-R.ttf");
-}
 
 body {
   margin: 0;
@@ -17,7 +13,7 @@ body {
 
 .resume {
   position: relative;
-  font-family: ubuntu, Arial, sans-serif;
+  font-family: "Ubuntu", Arial, sans-serif;
   font-size: 1.1em;
   background-color: #fff;
   color: #000;
