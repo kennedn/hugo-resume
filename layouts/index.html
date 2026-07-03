@@ -1,0 +1,251 @@
+{{ $data := hugo.Data.resume }}
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{{ $data.name.first }} {{ $data.name.last }} - CV</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  {{ $css := resources.Get "css/resume.css" | minify }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+</head>
+
+<body>
+  <div class="resume">
+    <div class="banner">
+      <div class="banner__fullname">
+        {{ $data.name.first }} {{ $data.name.middle }} {{ $data.name.last }}
+      </div>
+
+      <div class="banner__position">
+        {{ $data.position }}
+      </div>
+
+      <div class="banner__location">
+        Resides in {{ $data.birth.location }}
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="content__right">
+        <div class="section">
+          <div class="section-headline">
+            <i class="section-headline__icon material-icons">work</i>
+            Experience
+          </div>
+
+          <div class="section-content">
+            {{ range $data.experience }}
+              <a
+                target="_blank"
+                class="section-content__item"
+                href="{{ .website }}"
+              >
+                <span class="section-content__header">
+                  {{ .position }}
+                </span>
+
+                <span class="section-content__subheader">
+                  {{ .company }}
+
+                  {{ with .location }}
+                    <span class="section-content__plain">
+                      {{ . }} -
+                    </span>
+                  {{ end }}
+
+                  <span class="section-content__text inline">
+                    {{ .timeperiod }}
+                  </span>
+                </span>
+
+                <ul>
+                  {{ range .description }}
+                    <li class="section-content__text--light">
+                      {{ . }}
+                    </li>
+                  {{ end }}
+                </ul>
+              </a>
+            {{ end }}
+          </div>
+        </div>
+
+        {{ with $data.projects }}
+          <div class="section">
+            <div class="section-headline">
+              <i class="section-headline__icon material-icons">code</i>
+              Projects
+            </div>
+
+            <div class="section-content">
+              {{ range . }}
+                <a
+                  target="_blank"
+                  class="section-content__item"
+                  href="{{ .url }}"
+                >
+                  <span class="section-content__header">
+                    {{ .name }}
+                  </span>
+
+                  <span class="section-content__text">
+                    {{ .platform }}
+                  </span>
+
+                  <span class="section-content__text">
+                    {{ .description }}
+                  </span>
+                </a>
+              {{ end }}
+            </div>
+          </div>
+        {{ end }}
+
+        <div class="section">
+          <div class="section-headline">
+            <i class="section-headline__icon material-icons">school</i>
+            Education
+          </div>
+
+          <div class="section-content">
+            {{ range $data.education }}
+              <a
+                target="_blank"
+                class="section-content__item"
+                href="{{ .website }}"
+              >
+                <span class="section-content__header">
+                  {{ .degree }}
+                </span>
+
+                <span class="section-content__subheader">
+                  {{ .school }}
+
+                  <span class="section-content__text inline">
+                    - {{ .timeperiod }}
+                  </span>
+
+                  {{ with .description }}
+                    <span class="section-content__text">
+                      {{ . }}
+                    </span>
+                  {{ end }}
+                </span>
+              </a>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+
+      <div class="content__left">
+        {{ with $data.skills }}
+          <div class="section">
+            <div class="section-headline">
+              Technical Skills
+            </div>
+
+            <div class="section-content-grid">
+              {{ range where . "category" "technical" }}
+                <a
+                  target="_blank"
+                  class="grid-item"
+                  {{ with .url }}href="{{ . }}"{{ end }}
+                >
+                  <span class="squarred-grid-item">
+                    {{ .name }}
+                  </span>
+                </a>
+              {{ end }}
+            </div>
+
+            <div class="section-headline">
+              Professional Skills
+            </div>
+
+            <div class="section-content-grid">
+              {{ range where . "category" "professional" }}
+                <a
+                  target="_blank"
+                  class="grid-item"
+                  {{ with .url }}href="{{ . }}"{{ end }}
+                >
+                  <span class="squarred-grid-item">
+                    {{ .name }}
+                  </span>
+                </a>
+              {{ end }}
+            </div>
+          </div>
+        {{ end }}
+
+        <div class="section">
+          <div class="section-headline">
+            Contact
+          </div>
+
+          <div class="section-content section-content--plain">
+            <a
+              target="_blank"
+              class="section-link"
+              href="mailto:{{ $data.contact.email }}"
+            >
+              <i class="section-link__icon fa fa-paper-plane fa-fw"></i>
+              {{ $data.contact.email }}
+            </a>
+
+            {{ with $data.contact.website }}
+              <a
+                target="_blank"
+                class="section-link"
+                href="https://{{ . }}"
+              >
+                <i class="section-link__icon fa fa-globe fa-fw"></i>
+                {{ . }}
+              </a>
+            {{ end }}
+
+            {{ with $data.contact.linkedin }}
+              <a
+                target="_blank"
+                class="section-link"
+                href="https://www.linkedin.com/in/{{ . }}"
+              >
+                <i class="section-link__icon fa fa-linkedin fa-fw"></i>
+                {{ . }}
+              </a>
+            {{ end }}
+
+            {{ with $data.contact.github }}
+              <a
+                target="_blank"
+                class="section-link"
+                href="https://github.com/{{ . }}"
+              >
+                <i class="section-link__icon fa fa-github fa-fw"></i>
+                {{ . }}
+              </a>
+            {{ end }}
+
+            {{ with $data.contact.medium }}
+              <a
+                target="_blank"
+                class="section-link"
+                href="https://medium.com/@{{ . }}"
+              >
+                <i class="section-link__icon fa fa-medium fa-fw"></i>
+                {{ . }}
+              </a>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

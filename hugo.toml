@@ -1,0 +1,4 @@
+baseURL = "https://kennedn.com/"
+locale = "en-GB"
+title = "Joshua Kennedy"
+disableKinds = ["taxonomy", "term"]

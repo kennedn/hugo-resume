@@ -1,0 +1,179 @@
+name:
+  first: Joshua
+  middle: 
+  last: Kennedy
+
+position: Cloud Platform Engineer
+
+about: 
+
+birth:
+  year: 1995
+  location: Scotland
+
+experience:
+- company: NatWest
+  position: Cloud Platform Engineer
+  timeperiod: October 2023 - Present
+  description:
+    - Engineered strategic on-premise Container-as-a-Service (CaaS) capabilities supporting 33 OpenShift clusters across four environments for approximately 300 engineering teams.
+    - Developed platform engineering capabilities through policy-driven automation and GitLab CI/CD, delivering centralised GitOps orchestration, HashiCorp Vault integration and customer guardrails.
+    - Designed reusable platform capabilities consumed by ~1200 applications, reducing operational complexity while improving consistency and self-service.
+    - Collaborated within a 20-person platform engineering team alongside principal engineers, architects and stakeholders to deliver shared platform capabilities in a regulated financial services environment.
+    - Continuously evaluated, prototyped and implemented improvements to platform tooling, automation and operational workflows to increase platform maturity and developer productivity.
+  website: https://natwest.com
+
+- company: NatWest
+  position: Cloud Automation Engineer
+  timeperiod: September 2021 - October 2023
+  description:
+    - Joined a small R&D team focused on expanding the bank's on-premise cloud computing capabilities.
+    - Built experience across OpenShift, Kubernetes, container orchestration, Linux and cloud platform automation.
+    - Delivered proof-of-concept work for certificate automation using cert-manager and centralised secret management using HashiCorp Vault.
+    - Collaborated across teams to turn emerging platform requirements into working prototypes and executable patterns.
+    - Supported automation and CI/CD-aligned delivery practices to reduce manual effort and increase consistency across platform operations.
+  website: https://natwest.com
+
+- company: NatWest
+  position: Middleware Systems Engineer
+  timeperiod: February 2019 - September 2021
+  description:
+    - Built automation to streamline common support tasks for deployment orchestration tooling within a feature team.
+    - Automated agent upgrade workflows, enabling over 1,600 agents to be upgraded across approximately 50 teams within six months.
+    - Supported users and administrators of deployment orchestration platforms, producing documentation and running workshops to upskill a wider support team.
+    - Improved platform support processes by combining scripting, documentation, incident analysis and close collaboration with consuming teams.
+  website: https://natwest.com
+
+- company: RBS
+  position: Middleware Technical Analyst
+  timeperiod: January 2018 - February 2019
+  description:
+    - Delivered technical support for Java-based enterprise middleware, resolving over 150 individual incidents.
+    - Developed infrastructure support scripts and helped stand up deployment orchestration tooling.
+    - Built practical experience with REST API integration, high-availability clustering and production support in a regulated banking environment.
+  website: https://natwest.com
+
+- company: RBS
+  position: WebSphere Technical Apprentice
+  timeperiod: January 2016 - January 2018
+  description:
+    - Developed KornShell automation to replace a manual licensing process across approximately 5,000 servers.
+    - Audited and improved certificate renewal tracking workflows, building skills in Visual Basic, SQL and enterprise middleware administration.
+    - Completed Modern and Graduate Apprenticeship pathways while working in production financial services technology teams.
+  website: https://natwest.com
+
+education:
+- degree: Certificate of Higher Education in Engineering
+  school: The Open University
+  timeperiod: April 2023 - October 2025
+  website: https://www.open.ac.uk/
+
+- degree: "Red Hat OpenShift Administration II: Configuring a Production Cluster (DO280)"
+  timeperiod: October 2024
+  school: Red Hat
+  website: https://www.redhat.com/en/services/training/do280-red-hat-openshift-administration-ii-configuring-production-cluster
+
+- degree: Red Hat Certified Specialist in Containers and Kubernetes
+  timeperiod: July 2022
+  school: Red Hat
+  website: https://rhtapps.redhat.com/verify?certId=220-123-673
+
+- degree: Graduate Apprenticeship Scotland in IT & Telecommunications Professionals
+  timeperiod: January 2017 - November 2017
+  school: QA
+  website: https://www.qa.com/apprenticeships/become-an-apprentice/
+
+- degree: Modern Apprenticeship Scotland in IT & Telecommunications Professionals
+  timeperiod: January 2016 - November 2016
+  school: QA
+  website: https://www.qa.com/apprenticeships/become-an-apprentice/
+
+- degree: HND Computer Games Development
+  timeperiod: August 2013 - August 2015
+  school: Edinburgh College
+  website: https://www.edinburghcollege.ac.uk/
+
+skills:
+- name: Platform Engineering
+  category: technical
+- name: Software Engineering
+  category: technical
+- name: OpenShift / Kubernetes
+  category: technical
+- name: Automation
+  category: technical
+- name: CI/CD
+  category: technical
+- name: Linux
+  category: technical
+- name: Infrastructure as Code
+  category: technical
+- name: Go
+  category: technical
+- name: Shell / Bash / KornShell
+  category: technical
+- name: REST APIs
+  category: technical
+- name: Python
+  category: technical
+- name: JavaScript
+  category: technical
+- name: Embedded C / C++
+  category: technical
+- name: Security & Policy Controls
+  category: technical
+
+- name: Technical Leadership
+  category: professional
+- name: Stakeholder Communication
+  category: professional
+- name: Cross-functional Collaboration
+  category: professional
+- name: Problem Solving
+  category: professional
+- name: Continuous Improvement
+  category: professional
+- name: Mentoring
+  category: professional
+
+knowledge:
+
+projects:
+- name: tapo-onboarding
+  platform: Shell / Reverse Engineering / IoT
+  description: Reverse engineered TP-Link's encrypted provisioning protocol to create one of the first open-source toolchains capable of onboarding modern Tapo cameras without vendor cloud services, solving a problem previously lacking a practical community solution.
+  url: https://github.com/kennedn/tapo-onboarding
+
+- name: Stateful
+  platform: JavaScript / Pebble / REST APIs
+  description: Developed a generic REST client for Pebble that enabled arbitrary REST APIs to be modelled and controlled from the watch without assumptions about the underlying service, addressing a capability absent from existing applications on the platform.
+  url: https://github.com/kennedn/Stateful
+
+- name: restate-go
+  platform: Go / Home Automation / APIs
+  description: Developing a local-first home automation platform that prioritises ownership, privacy and reliability over cloud-dependent architectures, exploring an alternative to conventional commercial ecosystems.
+  url: https://github.com/kennedn/restate-go
+
+- name: Snowdon II WiFi
+  platform: C++ / Raspberry Pi Pico / REST APIs / Infrared
+  description: Engineered an embedded hardware modification that adds Wi-Fi and a REST API to a consumer soundbar through infrared protocol emulation and state inference, creating capabilities unavailable from the manufacturer.
+  url: https://github.com/kennedn/snowdon-ii-wifi
+
+
+certificates:
+- name: "Red Hat OpenShift Administration II: Configuring a Production Cluster (DO280) - Ver. 4.14"
+  description: Production OpenShift administration and configuration.
+
+- name: Red Hat Certified Specialist in Containers and Kubernetes
+  description: Red Hat certification covering Podman, Kubernetes and OpenShift. Credential ID 220-123-673.
+
+contact:
+  email: kennedn@msn.com
+  phone: 
+  street:
+  city: Edinburgh, Scotland
+  website: kennedn.com
+  github: kennedn
+  linkedin: kennedn
+
+lang: en
