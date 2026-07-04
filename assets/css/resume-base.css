@@ -4,19 +4,12 @@
   box-sizing: border-box;
 }
 
-html,
-body {
-  min-height: 100%;
-}
-
 body {
   margin: 0;
-  min-height: 100vh;
 }
 
 .resume {
   position: relative;
-  min-height: 100vh;
   font-family: "Ubuntu", Arial, sans-serif;
   font-size: 1.1em;
   background-color: var(--page-background);

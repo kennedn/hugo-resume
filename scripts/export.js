@@ -5,7 +5,7 @@ const path = require('path');
 const WIDTH = 1200;
 const PUBLIC_DIR = path.resolve(__dirname, '../public');
 const OUTPUT_DIR = path.resolve(__dirname, '../assets/out');
-const SITE_ORIGIN = 'http://127.0.0.1:1313';
+const SITE_ORIGIN = 'http://127.0.0.1:1313/resume';
 
 function ensureDirectory(filePath) {
   fs.mkdirSync(path.dirname(filePath), { recursive: true });

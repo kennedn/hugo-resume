@@ -4,7 +4,9 @@ A simple CV/resume generator built with Hugo.
 
 Resume content is defined in YAML and rendered as a static HTML page. A small Puppeteer export script can also render the resume to a single-page PDF.
 
-<img src="assets/images/example-resume.png" alt="Example resume" width="50%">
+| Plain | Colorful |
+| --- | --- |
+| <img src="assets/images/example-resume-plain.png" alt="Example resume" width="100%"> | <img src="assets/images/example-resume-colorful.png" alt="Example resume" width="100%"> |
 
 ## Prerequisites
 
