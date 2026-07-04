@@ -12,7 +12,9 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  {{ $css := resources.Get "css/resume.css" | minify | fingerprint }}
+  {{ $baseCss := resources.Get "css/resume-base.css" }}
+  {{ $themeCss := resources.Get "css/resume.css" }}
+  {{ $css := slice $baseCss $themeCss | resources.Concat "css/resume.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 </head>
 

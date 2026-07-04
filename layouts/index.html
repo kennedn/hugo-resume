@@ -14,7 +14,9 @@
   <link rel="stylesheet" href="{{ "css/fonts.css" | relURL }}">
   <link rel="stylesheet" href="{{ "css/font-awesome.min.css" | relURL }}">
 
-  {{ $css := resources.Get "css/resume.css" | minify | fingerprint }}
+  {{ $baseCss := resources.Get "css/resume-base.css" }}
+  {{ $themeCss := resources.Get "css/resume.css" }}
+  {{ $css := slice $baseCss $themeCss | resources.Concat "css/resume.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 </head>
 

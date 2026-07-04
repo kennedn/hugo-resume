@@ -1,5 +1,5 @@
 baseURL = "https://kennedn.com/resume/"
 locale = "en-GB"
 title = "Joshua Kennedy"
-theme = "plain"
+theme = "colorful"
 disableKinds = ["taxonomy", "term"]
