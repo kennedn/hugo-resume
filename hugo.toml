@@ -1,4 +1,5 @@
 baseURL = "https://kennedn.com/"
 locale = "en-GB"
 title = "Joshua Kennedy"
+theme = "plain"
 disableKinds = ["taxonomy", "term"]

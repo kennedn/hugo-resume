@@ -1,0 +1,30 @@
+{{ $data := hugo.Data.resume }}
+{{ $page := . }}
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
+
+  <title>{{ $page.Title }} - {{ $data.name.first }} {{ $data.name.last }}</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  {{ $css := resources.Get "css/resume.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+</head>
+
+<body>
+  <div class="resume">
+    {{ partial "header.html" $data }}
+
+    <div class="content">
+      <div class="content__full">
+        {{ $page.Content }}
+      </div>
+    </div>
+  </div>
+</body>
+</html>
