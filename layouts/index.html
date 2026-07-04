@@ -8,8 +8,11 @@
 
   <title>{{ $data.name.first }} {{ $data.name.last }} - CV</title>
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preload" href="{{ "fonts/ubuntu-v21-latin-regular.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ "fonts/material-icons.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ "fonts/fontawesome-webfont.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="{{ "css/fonts.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/font-awesome.min.css" | relURL }}">
 
   {{ $css := resources.Get "css/resume.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
