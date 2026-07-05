@@ -251,6 +251,12 @@ li::before {
     width: 100%;
     padding: 20px 16px;
   }
+  .content__left {
+    padding-top: 0px;
+  }
+  .content__right {
+    padding-bottom: 0px;
+  }
 
   .content__left,
   .content__full {
